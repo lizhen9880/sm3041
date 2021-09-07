@@ -58,10 +58,10 @@ static void sm3041_read_entry(void *parameter)
         {       
             sm3041_p = sm30_data[0].data.baro;
             sm3041_t = sm30_data[1].data.temp;
-            LOG_I("sm9541 fetch pressure is %d.%d, %d\r\n",
+            LOG_I("sm3041 fetch pressure is %d.%d, %d\r\n",
                 sm3041_p / SM30_BARO_X_N, sm3041_p>0?sm3041_p % SM30_BARO_X_N : -sm3041_p % SM30_BARO_X_N, 
                 sm30_data[0].timestamp);
-            LOG_I("sm9541 fetch temperature is %d.%d, %d\r\n",
+            LOG_I("sm3041 fetch temperature is %d.%d, %d\r\n",
                 sm3041_t / SM30_TEMP_X_N, sm3041_t>0?sm3041_t % SM30_TEMP_X_N : -sm3041_t % SM30_TEMP_X_N, 
                 sm30_data[1].timestamp);
         }

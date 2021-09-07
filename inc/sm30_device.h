@@ -25,7 +25,13 @@ typedef struct sm30_device* sm30_dev_t;
 /* sm3041 register value */
 #define SM3041_MAXCOUNT         14745
 #define SM3041_MINCOUNT         1638
-#define SM3041_I2C_BUS          "i2c1"            /* i2c linked */ 
+
+#ifdef PKG_SM3041_DEVICE_NAME
+#define SM3041_I2C_BUS          PKG_SM3041_DEVICE_NAME           /* i2c linked */
+#else
+#define SM3041_I2C_BUS          "i2c1"           /* i2c linked */
+#endif
+
 #define SM3041_DEVICE_NAME      "sm3041"   /* register sensor device name*/   
     
 /* sm3041 device info for RT-Thread sensor device*/
